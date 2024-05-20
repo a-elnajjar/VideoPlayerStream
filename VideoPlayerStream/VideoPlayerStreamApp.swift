@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct VideoPlayerStreamApp: App {
@@ -13,5 +14,6 @@ struct VideoPlayerStreamApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: Stream.self)
     }
 }
