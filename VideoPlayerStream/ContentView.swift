@@ -11,10 +11,22 @@ import AVKit
 import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) var m
+    @Environment(\.modelContext) var context
     @State private var player: AVPlayer? = nil
     @State private var showingSheet = false
     @Query private var streams: [Stream]
+    
+    private func deleteStream(indexSet: IndexSet) {
+        indexSet.forEach { index in
+            let stream = streams[index]
+            context.delete(stream)
+            do {
+                try context.save()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
     
     var body: some View {
         NavigationView {
@@ -34,7 +46,7 @@ struct ContentView: View {
                     showingSheet = true
                 }
                 .sheet(isPresented: $showingSheet) {
-                    StreamInputView(isPresented: $showingSheet) 
+                    StreamInputView(isPresented: $showingSheet)
                 }
                 
                 List {
@@ -51,13 +63,13 @@ struct ContentView: View {
                                 player = AVPlayer(url: url)
                             }
                         }
-                    }
+                        
+                    }.onDelete(perform: deleteStream)
                 }
                 .navigationTitle("Streams")
             }
         }
     }
-    
 }
 
 
