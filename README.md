@@ -1,4 +1,5 @@
 # Swift Streaming App
+![Simulator Screenshot - iPhone 15 Pro - 2024-05-21 at 15 24 25](https://github.com/a-elnajjar/VideoPlayerStream/assets/338095/752c69a9-aca5-4661-afd6-6975709178a5)
 
 This is a Swift application that allows users to add and play video streams.
 
