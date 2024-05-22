@@ -28,8 +28,4 @@ To use the app, simply run it in Xcode. You can add a stream by tapping the "Add
 - iOS 17.0 or later
 - Xcode 15.0 or later
 
-## Future Development
 
-- Delete Stream: Add the ability for users to delete a stream from the list.
-- Update Stream: Add the ability for users to update the URL of a stream in the list.
--
