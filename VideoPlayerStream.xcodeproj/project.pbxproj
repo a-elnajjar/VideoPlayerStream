@@ -12,6 +12,7 @@
 		8E2B72AC2BFAE4E90098C75D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E2B72AB2BFAE4E90098C75D /* Assets.xcassets */; };
 		8E2B72AF2BFAE4E90098C75D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E2B72AE2BFAE4E90098C75D /* Preview Assets.xcassets */; };
 		8E2B72B62BFAF5DF0098C75D /* StreamInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2B72B52BFAF5DF0098C75D /* StreamInputView.swift */; };
+		8E3F090C2BFD6FFB0003A612 /* UpdateStreamLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3F090B2BFD6FFB0003A612 /* UpdateStreamLinkView.swift */; };
 		8E5E84032BFBFEF400F614E9 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E84022BFBFEF400F614E9 /* Stream.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +23,7 @@
 		8E2B72AB2BFAE4E90098C75D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E2B72AE2BFAE4E90098C75D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8E2B72B52BFAF5DF0098C75D /* StreamInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamInputView.swift; sourceTree = "<group>"; };
+		8E3F090B2BFD6FFB0003A612 /* UpdateStreamLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStreamLinkView.swift; sourceTree = "<group>"; };
 		8E5E84022BFBFEF400F614E9 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +63,7 @@
 				8E5E84022BFBFEF400F614E9 /* Stream.swift */,
 				8E2B72AB2BFAE4E90098C75D /* Assets.xcassets */,
 				8E2B72AD2BFAE4E90098C75D /* Preview Content */,
+				8E3F090B2BFD6FFB0003A612 /* UpdateStreamLinkView.swift */,
 			);
 			path = VideoPlayerStream;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			files = (
 				8E2B72AA2BFAE4E80098C75D /* ContentView.swift in Sources */,
 				8E2B72A82BFAE4E80098C75D /* VideoPlayerStreamApp.swift in Sources */,
+				8E3F090C2BFD6FFB0003A612 /* UpdateStreamLinkView.swift in Sources */,
 				8E2B72B62BFAF5DF0098C75D /* StreamInputView.swift in Sources */,
 				8E5E84032BFBFEF400F614E9 /* Stream.swift in Sources */,
 			);

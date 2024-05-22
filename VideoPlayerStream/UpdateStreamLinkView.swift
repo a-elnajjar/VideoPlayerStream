@@ -1,20 +1,19 @@
 //
-//  StreamInputView.swift
+//  UpdateStreamLinkView.swift
 //  VideoPlayerStream
 //
-//  Created by Abdalla Elnajjar on 2024-05-19.
+//  Created by Abdalla Elnajjar on 2024-05-21.
 //
 
 import SwiftUI
-import SwiftData
 
-
-struct StreamInputView: View {
+struct UpdateStreamLinkView: View {
     
     @State private var name = ""
     @State private var url = ""
     @Environment(\.modelContext) private var context
-    @Binding var isPresented: Bool
+    @Environment(\.dismiss) private var dismiss
+    let streamLink: Stream
 
     var body: some View {
         VStack {
@@ -27,7 +26,7 @@ struct StreamInputView: View {
                 .padding()
 
             Button("Done") {
-                addStream()
+                UpdateStream()
                 isPresented = false
               
             }
@@ -36,9 +35,11 @@ struct StreamInputView: View {
         .padding()
     }
 
-    private func addStream() {
-        let newStream = Stream(name: name, url: url)
+    private func UpdateStream() {
+        streamLink.name = $name
+        streamLink.url = $url
         
+        context.insert(newStream)
         do {
             try context.save()
         } catch {
@@ -46,7 +47,6 @@ struct StreamInputView: View {
         }
     }
 }
-
 #Preview {
-    StreamInputView(isPresented: .constant(true) )
+    UpdateStreamLinkView(isPresented: .constant(true))
 }
